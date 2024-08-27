@@ -18,10 +18,12 @@
                 <input asp-for="OrderDate" class="form-control" />
                 <span asp-validation-for="OrderDate" class="text-danger"></span>
             </div>
+           
             <div class="form-group">
                 <label asp-for="OrderStatus" class="control-label"></label>
-                <input asp-for="OrderStatus" class="form-control" />
-                <span asp-validation-for="OrderStatus" class="text-danger"></span>
+                <select asp-for="OrderStatus" asp-items="Html.GetEnumSelectList<OrderStatus>()" class="form-select">
+                    <option selected="selected" value=""></option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="StaffId" class="control-label"></label>
