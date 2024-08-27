@@ -9,7 +9,12 @@ public partial class Order
 
     public DateOnly? OrderDate { get; set; }
 
-    public int? OrderStatus { get; set; }
+    public OrderStatus? OrderStatus { get; set; }
 
     public int? StaffId { get; set; }
+}
+
+public enum OrderStatus
+{
+    PENDING,COMPLETED
 }
